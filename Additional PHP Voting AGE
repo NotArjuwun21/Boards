@@ -1,4 +1,5 @@
 <?php
+// Ensure this PHP block is opened correctly
 if (isset($_POST['Submit'])) {
     $age = $_POST['age'];
     if ($age >= 18) {
@@ -75,6 +76,7 @@ if (isset($_POST['Submit'])) {
         </form>
 
         <?php
+        // Display the result if the message is set
         if (isset($message)) {
             echo "<div class='result'>$message</div>";
         }
@@ -83,4 +85,3 @@ if (isset($_POST['Submit'])) {
 
 </body>
 </html>
- 
