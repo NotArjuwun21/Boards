@@ -1,0 +1,85 @@
+<?php
+if (isset($_POST['Submit'])) {
+    $age = $_POST['age'];
+    if ($age >= 18) {
+        $message = "<b>You are eligible to vote</b>";
+    } else {
+        $message = "<b>You are not eligible to vote</b>";
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Eligibility Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #1976d2;
+            font-size: 2em;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #1976d2;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        input[type="submit"]:hover {
+            background-color: #1565c0;
+        }
+        .result {
+            font-size: 1.2em;
+            color: #388e3c;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Voting Eligibility Check</h1>
+        <form method="POST" action="">
+            <label for="age">Enter your age:</label><br>
+            <input type="text" name="age" id="age"><br><br>
+            <input type="submit" name="Submit" value="Check">
+        </form>
+
+        <?php
+        if (isset($message)) {
+            echo "<div class='result'>$message</div>";
+        }
+        ?>
+    </div>
+
+</body>
+</html>
