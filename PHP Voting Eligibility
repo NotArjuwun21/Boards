@@ -1,0 +1,19 @@
+<?php
+if (isset($_POST['Submit'])) {
+    $age = $_POST['age'];
+    if ($age >= 18) {
+        echo "<br><b>You are eligible to vote</b>";
+    } else {
+        echo "<br><b>You are not eligible to vote</b>";
+    }
+}
+?>
+<html>
+<body>
+    <h1 align="center">Voting Eligibility Check</h1>
+    <form method="POST" action="age.php">
+        Age: <input type="text" name="age"><br><br>
+        <input type="submit" name="Submit" value="Check">
+    </form>
+</body>
+</html>
