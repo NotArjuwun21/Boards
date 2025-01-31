@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            color: #1976d2;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #1976d2;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        .unit {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        function Convert(degree) {
+            var x;
+            if (degree == "C") {
+                x = document.getElementById("c").value * 9/5 + 32;
+                document.getElementById("f").value = Math.round(x);
+            } else {
+                x = (document.getElementById("f").value - 32) * 5/9;
+                document.getElementById("c").value = Math.round(x);
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Temperature Converter</h2>
+        <p>Insert the number into one of the fields:</p>
+        
+        <input type="text" id="c" onkeyup="Convert('C')" placeholder="Enter Celsius" autocomplete="off"> <span class="unit">°C</span><br>
+        <input type="text" id="f" onkeyup="Convert('F')" placeholder="Enter Fahrenheit" autocomplete="off"> <span class="unit">°F</span>
+
+        <p class="note">Simply type the temperature value in either Celsius or Fahrenheit, and it will automatically convert.</p>
+    </div>
+
+</body>
+</html>
