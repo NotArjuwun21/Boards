@@ -1,0 +1,88 @@
+<?php
+if (isset($_POST['submit'])) {
+    $str = strtolower($_POST['str']);
+    $vowels = array('a','e','i','o','u');
+    $num = 0;
+    for ($i = 0; $i < strlen($str); $i++) {
+        if (in_array($str[$i], $vowels)) {
+            $num++;
+        }
+    }
+    $message = "Number of vowels: $num";
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #1976d2;
+            font-size: 2em;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #1976d2;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        input[type="submit"]:hover {
+            background-color: #1565c0;
+        }
+        .result {
+            font-size: 1.2em;
+            color: #388e3c;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Vowel Counter</h1>
+        <form method="POST">
+            <label for="str">Enter a string:</label><br>
+            <input type="text" name="str" id="str"><br><br>
+            <input type="submit" name="submit" value="Count Vowels">
+        </form>
+
+        <?php
+        if (isset($message)) {
+            echo "<div class='result'>$message</div>";
+        }
+        ?>
+    </div>
+
+</body>
+</html>
