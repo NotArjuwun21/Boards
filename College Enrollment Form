@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Enrollment</title>
+    <meta name="Author" content="Dept of IT">
+    <meta name="description" content="Enrollment Form">
+    <meta name="keywords" content="Style.css">
+</head>
+<body bgcolor="aqua">
+    <h1 style="font-style:italic; background-color:orange; color:red; text-align:center">
+        <u>HPT ARTS and RYK SCIENCE JUNIOR COLLEGE</u>
+    </h1>
+    <hr size="5">
+    <img src="1.jpg" height="50%" width="70%" border="3" alt="College Campus">
+    <p style="font-family:Prold; font-style:italic">College Road, Nashik-3</p>
+    <hr>
+    <form name="F4">
+        Name: <input type="text" name="t4"><br><br>
+        Email: <input type="email" name="nm" size="20"><br><br>
+        Registration No.: <input type="number" name="nz" required><br><br>
+        Birthdate: <input type="date" name="bda"><br><br>
+        Address: <textarea rows="2"></textarea><br><br>
+        Class: 
+        <input type="radio" name="class"> XI
+        <input type="radio" name="class"> XII<br><br>
+        Phone: <input type="tel" name="ph"><br><br>
+        <input type="submit" name="st" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <a href="home.html">Home</a>
+</body>
+</html>
