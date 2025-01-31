@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Enrollment</title>
+    <meta name="Author" content="Dept of IT">
+    <meta name="description" content="Enrollment Form">
+    <meta name="keywords" content="Enrollment, College">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff7043;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        header h1 {
+            font-style: italic;
+            text-decoration: underline;
+            font-size: 2em;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        img {
+            width: 70%;
+            height: auto;
+            border: 3px solid #ff7043;
+            display: block;
+            margin: 20px auto;
+        }
+        .address {
+            font-style: italic;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ff7043;
+            border-radius: 5px;
+        }
+        .submit-btn, .reset-btn {
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover, .reset-btn:hover {
+            background-color: #ff5722;
+        }
+        a {
+            color: #ff7043;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HPT ARTS and RYK SCIENCE JUNIOR COLLEGE</h1>
+    </header>
+
+    <div class="container">
+        <img src="1.jpg" alt="College Campus">
+        <p class="address">College Road, Nashik-3</p>
+
+        <form name="F4">
+            <label>Name:</label>
+            <input type="text" name="t4"><br>
+
+            <label>Email:</label>
+            <input type="email" name="nm"><br>
+
+            <label>Registration No.:</label>
+            <input type="number" name="nz" required><br>
+
+            <label>Birthdate:</label>
+            <input type="date" name="bda"><br>
+
+            <label>Address:</label>
+            <textarea name="address" rows="2"></textarea><br>
+
+            <label>Class:</label>
+            <input type="radio" name="class"> XI
+            <input type="radio" name="class"> XII<br>
+
+            <label>Phone:</label>
+            <input type="tel" name="ph"><br>
+
+            <input type="submit" class="submit-btn" value="Submit">
+            <input type="reset" class="reset-btn" value="Reset">
+        </form>
+
+        <p><a href="home.html">Go back to Home</a></p>
+    </div>
+
+</body>
+</html>
